@@ -1,0 +1,57 @@
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, "Segoe UI", Arial, sans-serif; color: #17243a; background: #f5f7fb; }
+button, input { font: inherit; }
+.app { min-height: 100vh; display: flex; }
+.sidebar { width: 245px; background: #101d33; color: white; padding: 28px 18px; display: flex; flex-direction: column; flex-shrink: 0; }
+.brand { display: flex; align-items: center; gap: 12px; margin-bottom: 55px; }
+.brand-icon { background: #3275e8; padding: 12px; border-radius: 10px; font-weight: 800; }
+.brand strong, .brand small { display: block; }
+.brand small { color: #9baac1; margin-top: 4px; }
+.side-label { color: #8494ad; font-size: 11px; letter-spacing: 1.5px; margin: 0 10px 15px; }
+.nav-item { padding: 13px 12px; color: #c2cde0; border-radius: 8px; margin-bottom: 7px; font-size: 14px; }
+.nav-item.active { background: #243b60; color: white; }
+.sidebar-bottom { margin-top: auto; font-size: 13px; color: #cbd5e4; }
+.sidebar-bottom small { display: block; color: #8494ad; margin-top: 10px; }
+.status-dot { display: inline-block; width: 8px; height: 8px; background: #35c98a; border-radius: 50%; margin-right: 8px; }
+.main { flex: 1; min-width: 0; }
+.topbar { height: 68px; background: white; border-bottom: 1px solid #e7ebf2; padding: 0 38px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #718096; }
+.environment { background: #edf4ff; color: #2765c4; padding: 8px 12px; border-radius: 20px; font-size: 10px; font-weight: 700; letter-spacing: 1px; }
+.content { max-width: 1000px; padding: 65px 45px 30px; margin: auto; }
+.eyebrow { color: #3475df; font-size: 11px; letter-spacing: 2px; font-weight: 700; }
+.welcome h1 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -1.5px; margin: 15px 0; }
+.welcome h1 span { color: #3475df; }
+.welcome p { color: #758198; line-height: 1.7; }
+.suggestions { margin-top: 48px; }
+.suggestions h3 { font-size: 15px; margin-bottom: 18px; }
+.suggestion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.suggestion { text-align: left; background: white; border: 1px solid #e5eaf2; border-radius: 10px; padding: 18px; color: #33445d; cursor: pointer; font-size: 13px; }
+.suggestion:hover { border-color: #3475df; background: #f9fbff; }
+.suggestion span { color: #3475df; margin-right: 10px; }
+.conversation { margin-top: 35px; }
+.message { display: flex; gap: 14px; margin: 25px 0; }
+.avatar { width: 34px; height: 34px; flex-shrink: 0; display: grid; place-items: center; background: #e4edff; color: #2865c5; border-radius: 10px; font-size: 12px; font-weight: 700; }
+.message.user .avatar { background: #e9edf3; color: #475569; }
+.message-content { min-width: 0; flex: 1; }
+.message-content > p { margin: 7px 0; line-height: 1.6; }
+.result { background: white; border: 1px solid #e5eaf2; border-radius: 12px; padding: 18px; overflow: hidden; }
+.result-meta { color: #718096; font-size: 11px; margin-bottom: 16px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { padding: 12px; border-bottom: 1px solid #edf0f5; text-align: left; white-space: nowrap; }
+th { color: #62718a; background: #f7f9fc; text-transform: capitalize; }
+.source-note { color: #8290a5; font-size: 10px; margin: 15px 0 0; }
+.error { color: #c0392b; }
+.loading { color: #3475df; padding: 12px 48px; font-size: 13px; }
+.composer { display: flex; gap: 10px; background: white; padding: 10px; border: 1px solid #dfe6f0; border-radius: 12px; margin-top: 35px; box-shadow: 0 8px 30px rgba(20,40,80,.05); }
+.composer input { flex: 1; min-width: 0; border: 0; outline: 0; padding: 12px; color: #17243a; }
+.composer button { background: #286bd4; color: white; border: 0; border-radius: 8px; padding: 12px 18px; cursor: pointer; }
+.composer button:disabled { opacity: .5; cursor: not-allowed; }
+.disclaimer { text-align: center; font-size: 10px; color: #94a0b2; margin-top: 14px; }
+@media (max-width: 700px) {
+  .sidebar { display: none; }
+  .content { padding: 35px 18px; }
+  .suggestion-grid { grid-template-columns: 1fr; }
+  .topbar { padding: 0 18px; }
+  .composer button { padding: 10px; font-size: 12px; }
+}
